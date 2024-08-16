@@ -66,7 +66,9 @@ This guide provides a basic configuration. You might need to adjust settings bas
 ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
 	
+For the next time you SSH you VM instance, this External IP will change. Remember to copy-paste it in the command.
 You have now successfully established an SSH tunnel to your VM instance and can interact with it from your local terminal.
+
 
 **Troubleshooting:** 
 Connection refused
