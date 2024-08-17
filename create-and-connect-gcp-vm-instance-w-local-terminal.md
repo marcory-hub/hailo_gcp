@@ -90,4 +90,5 @@ You have now successfully established an SSH tunnel to your VM instance and can 
 
 ### Connection timed out
 **Network connectivity**: Check your internet connection and network configuration.
+
 **VM status**: Ensure the VM is running and accessible.
