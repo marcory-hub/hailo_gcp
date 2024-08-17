@@ -8,8 +8,6 @@ Google account
 
 ## Generate public- and private key
 
-### Generate keys
-
 In your local terminal generate a public and private key with the following command below. Replace PATH with a secure location on your local drive where you store your keys (for example ~/.ssh/). Replace KEYNAME with a descriptive name (for example CGPkey). Replace USERNAME with your username in GCP, a strong passphrase is recommended for added security.
 ```sh
 ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
@@ -17,18 +15,10 @@ ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 
 ## Create a VM instance
 
-### Create or Select a Project
-
-Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
-
-### Create VM instance
-
-In the Navigation Menu (top left) navigate to 
-- Compute Engine
-- VM instances
-- click CREATE INSTANCE (top middel)
-
-### Configure the VM instance
+- **Create or Select a Project
+**: Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
+- **Create VM instance**: In the Navigation Menu (top left) navigate to Compute Engine > VM instances > click CREATE INSTANCE (top middel)
+- **Configure the VM instance**: 
 
 **Name**: choose a descriptive name for your VM
 
@@ -44,7 +34,7 @@ In the Navigation Menu (top left) navigate to
 	
 **Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser)
 
-Click CREATE
+- Click CREATE
 	
 This guide provides a basic configuration. You might need to adjust settings based on your specific needs.
 
