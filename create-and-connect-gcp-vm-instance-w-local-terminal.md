@@ -1,6 +1,7 @@
-# Create Google Cloud Platform VM instance and connect GC VM using SSH from Terminal
+# How to Install Hailo SW Suite Without Required Hardware (Part 1/2)
 
-This guide walks you through creating a Virtual Machine (VM) instance in Google Cloud Platform (GCP)
+## Create Google Cloud Platform VM Instance and Connect via SSH
+This guide is for Raspberry Pi 5 Hailo-8L AI-kit owners who lack the necessary hardware to install the Hailo Software Suite. Part 1 focuses on setting up a virtual environment by creating a Virtual Machine (VM) instance on Google Cloud Platform (GCP) and establishing a secure SSH connection to it from your local terminal. Once connected, you'll be able to interact with the VM as if it were a local machine and proceed with the Hailo SW suite installation in Part 2.
 
 #### Prerequisits
 
@@ -41,17 +42,16 @@ ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
 	
 For the next time you SSH you VM instance, this External IP will change. Remember to copy-paste it in the command.
-If you successfully established an SSH tunnel to your VM instance and can interact with it from your local terminal.
 
 ## Troubleshooting 
 
 ### Connection refused
 **Firewall**: Ensure SSH port (22 by default) is open in the VM's firewall rules.
 
-**SSH service**: Verify SSH service is running on the VM using 'sudo systemctl status sshd'. If not, start it with 'sudo systemctl start sshd'.
+**SSH service**: Verify SSH service is running on the VM using `sudo systemctl status sshd`. If not, start it with `sudo systemctl start sshd`.
 
 ### Permission denied (publickey)
-**Key permissions**: Ensure private key is readable only by you: 'chmod 600 ~/.ssh/CGPkey' (adjust path and keyname if needed).
+**Key permissions**: Ensure private key is readable only by you: `chmod 600 ~/.ssh/CGPkey` (adjust path and keyname if needed).
 
 **Authorized_keys**: Verify your public key is added to the authorized_keys file on the VM (usually located at ~/.ssh/).
 
