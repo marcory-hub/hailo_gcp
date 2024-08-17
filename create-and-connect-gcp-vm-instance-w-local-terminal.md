@@ -18,25 +18,25 @@ ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 ## Create a VM instance
 This guide provides a basic configuration. You might need to adjust settings based on your specific needs.
 
-- **Create or Select a Project**: Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
-- **Create VM instance**: In the Navigation Menu (top left) navigate to Compute Engine > VM instances > click CREATE INSTANCE (top middel)
-- **Configure the VM instance**: 
+1. **Create or Select a Project**: Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
+2. **Create VM instance**: In the Navigation Menu (top left) navigate to Compute Engine > VM instances > click CREATE INSTANCE (top middel)
+3. **Configure the VM instance**: 
 **Name**: choose a descriptive name for your VM. **Region/Zone**: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability). **Machine configuration**: select E2, select e2-standard-32gb (16gb to save costs), available policies (optional): GCP offers Spot VMs for lower costs. However, these VMs can be interrupted if needed by GCP, but 60-90% discount. **Boot disk**: Operating system: select Ubuntu 20.04. Optional: Boot disk type: select Standard persistent disk to save costs. Size (GB): 500 GB and resize upwars later if needed. Downgrading size is not possible. **Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser).
-- Click CREATE
+4. Click CREATE
 
 ## Upload public key to CGP
 
-- In GCP Navigation Menu navigate to Compute Engine > Metadata > SSH KEYS > EDIT > +ADD ITEM
-- Open your public key in your local terminal (for example with nano GCPkey.pub)
-- Copy this key
-- In GCP click ADD SSH KEY
-- Paste the key in SSH key #
-- click SAVE
+1. In GCP Navigation Menu navigate to Compute Engine > Metadata > SSH KEYS > EDIT > +ADD ITEM
+2. Open your public key in your local terminal (for example with nano GCPkey.pub)
+3. Copy this key
+4. In GCP click ADD SSH KEY
+5. Paste the key in SSH key #
+6. click SAVE
 
 ## Use private key to connect VM with local terminal
 
-- **Obtain VM External IP**: In the GCP Navigation Menu, navigate to Compute Engine > VM instances. Ensure the VM instance is active. If not, click Start/resume in the instance's menu. Copy External IP address of the instance.
-- **Establish SSH Connection**: Open a terminal in your local machine. Use the following command, replacing ~/.ssh with the path you use to store public- and private keys. Replace USERNAME with your GCP username and EXTERNALIP with the copied IP, confirm  the connection when prompted.
+1. **Obtain VM External IP**: In the GCP Navigation Menu, navigate to Compute Engine > VM instances. Ensure the VM instance is active. If not, click Start/resume in the instance's menu. Copy External IP address of the instance.
+2. **Establish SSH Connection**: Open a terminal in your local machine. Use the following command, replacing ~/.ssh with the path you use to store public- and private keys. Replace USERNAME with your GCP username and EXTERNALIP with the copied IP, confirm  the connection when prompted.
 ```sh
 ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
