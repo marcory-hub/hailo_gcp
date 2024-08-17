@@ -5,6 +5,7 @@ This guide walks you through creating a Virtual Machine (VM) instance in Google 
 #### Prerequisits
 
 Google account
+Access to [Google Cloud Platform](https://console.cloud.google.com)
 
 ## Generate public- and private key
 
@@ -16,25 +17,10 @@ ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 ## Create a VM instance
 This guide provides a basic configuration. You might need to adjust settings based on your specific needs.
 
-- **Create or Select a Project
-**: Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
+- **Create or Select a Project**: Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
 - **Create VM instance**: In the Navigation Menu (top left) navigate to Compute Engine > VM instances > click CREATE INSTANCE (top middel)
 - **Configure the VM instance**: 
-
-**Name**: choose a descriptive name for your VM
-
-**Region/Zone**: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability).
-
-**Machine configuration**:
-- select E2	
-- select e2-standard-32gb (16gb to save costs)
-- Available policies (optional):
-- GCP offers Spot VMs for lower costs. However, these VMs can be interrupted if needed by GCP, but 60-90% discount
-
-**Boot disk**: Operating system: select Ubuntu 20.04. Optional: Boot disk type: select Standard persistent disk to save costs. Size (GB): 500 GB and resize upwars later if needed. Downgrading size is not possible.
-	
-**Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser)
-
+**Name**: choose a descriptive name for your VM. **Region/Zone**: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability). **Machine configuration**: select E2, select e2-standard-32gb (16gb to save costs), available policies (optional): GCP offers Spot VMs for lower costs. However, these VMs can be interrupted if needed by GCP, but 60-90% discount. **Boot disk**: Operating system: select Ubuntu 20.04. Optional: Boot disk type: select Standard persistent disk to save costs. Size (GB): 500 GB and resize upwars later if needed. Downgrading size is not possible. **Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser).
 - Click CREATE
 
 ## Upload public key to CGP
@@ -55,8 +41,7 @@ ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
 	
 For the next time you SSH you VM instance, this External IP will change. Remember to copy-paste it in the command.
-
-You have now successfully established an SSH tunnel to your VM instance and can interact with it from your local terminal.
+If you successfully established an SSH tunnel to your VM instance and can interact with it from your local terminal.
 
 ## Troubleshooting 
 
