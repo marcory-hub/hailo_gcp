@@ -4,16 +4,13 @@ This guide walks you through creating a Virtual Machine (VM) instance in Google 
 
 #### Prerequisits
 
-Google account (you can use an existing one)
+Google account
 
 ## Generate public- and private key
 
 ### Generate keys
 
-In your local terminal generate a public and private key with the following command below. 
-- Replace PATH with a secure location on your local drive where you store your keys (for example ~/.ssh/).
-- Replace KEYNAME with a descriptive name (for example CGPkey).
-- Replace USERNAME with your username in GCP, a strong passphrase is recommended for added security.
+In your local terminal generate a public and private key with the following command below. Replace PATH with a secure location on your local drive where you store your keys (for example ~/.ssh/). Replace KEYNAME with a descriptive name (for example CGPkey). Replace USERNAME with your username in GCP, a strong passphrase is recommended for added security.
 ```sh
 ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 ```
@@ -26,23 +23,26 @@ Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.
 
 ### Create VM instance
 
-In the Navigation Menu (top left) navigate to Compute Engine > VM instances > click CREATE INSTANCE (top middel)
+In the Navigation Menu (top left) navigate to 
+- Compute Engine
+- VM instances
+- click CREATE INSTANCE (top middel)
 
 ### Configure the VM instance
 
-Name: choose a descriptive name for your VM
+**Name**: choose a descriptive name for your VM
 
-Region/Zone: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability).
+**Region/Zone**: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability).
 
-Machine configuration
+**Machine configuration**:
 - select E2	
 - select e2-standard-32gb (16gb to save costs)
 - Available policies (optional):
 - GCP offers Spot VMs for lower costs. However, these VMs can be interrupted if needed by GCP, but 60-90% discount
 
-Boot disk: Operating system: select Ubuntu 20.04. Optional: Boot disk type: select Standard persistent disk to save costs. Size (GB): 500 GB and resize upwars later if needed. Downgrading size is not possible.
+**Boot disk**: Operating system: select Ubuntu 20.04. Optional: Boot disk type: select Standard persistent disk to save costs. Size (GB): 500 GB and resize upwars later if needed. Downgrading size is not possible.
 	
-Firewall: activate allow HTTP traffic (needed for Jupyter notebook on local browser)
+**Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser)
 
 Click CREATE
 	
@@ -63,17 +63,11 @@ In GCP Navigation Menu navigate to Compute Engine > Metadata > SSH KEYS > EDIT >
 
 ### Obtain VM External IP
 
-In the GCP Navigation Menu, navigate to Compute Engine > VM instances
-
-Ensure the VM instance is active. If not, click Start/resume in the instance's menu 
-
-Copy External IP address of the instance
+In the GCP Navigation Menu, navigate to Compute Engine > VM instances. Ensure the VM instance is active. If not, click Start/resume in the instance's menu. Copy External IP address of the instance.
 
 ### Establish SSH Connection
 
-Open a terminal in your local machine.
-
-Use the following command, replacing ~/.ssh with the path you use to store public- and private keys. Replace USERNAME with your GCP username and EXTERNALIP with the copied IP, confirm  the connection when prompted.
+Open a terminal in your local machine. Use the following command, replacing ~/.ssh with the path you use to store public- and private keys. Replace USERNAME with your GCP username and EXTERNALIP with the copied IP, confirm  the connection when prompted.
 ```sh
 ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
