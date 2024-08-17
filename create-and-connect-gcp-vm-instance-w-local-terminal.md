@@ -14,6 +14,7 @@ ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 ```
 
 ## Create a VM instance
+This guide provides a basic configuration. You might need to adjust settings based on your specific needs.
 
 - **Create or Select a Project
 **: Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
@@ -35,14 +36,10 @@ ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 **Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser)
 
 - Click CREATE
-	
-This guide provides a basic configuration. You might need to adjust settings based on your specific needs.
 
 ## Upload public key to CGP
 
-### Add public SSH key
-
-In GCP Navigation Menu navigate to Compute Engine > Metadata > SSH KEYS > EDIT > +ADD ITEM
+- In GCP Navigation Menu navigate to Compute Engine > Metadata > SSH KEYS > EDIT > +ADD ITEM
 - Open your public key in your local terminal (for example with nano GCPkey.pub)
 - Copy this key
 - In GCP click ADD SSH KEY
@@ -51,13 +48,8 @@ In GCP Navigation Menu navigate to Compute Engine > Metadata > SSH KEYS > EDIT >
 
 ## Use private key to connect VM with local terminal
 
-### Obtain VM External IP
-
-In the GCP Navigation Menu, navigate to Compute Engine > VM instances. Ensure the VM instance is active. If not, click Start/resume in the instance's menu. Copy External IP address of the instance.
-
-### Establish SSH Connection
-
-Open a terminal in your local machine. Use the following command, replacing ~/.ssh with the path you use to store public- and private keys. Replace USERNAME with your GCP username and EXTERNALIP with the copied IP, confirm  the connection when prompted.
+- **Obtain VM External IP**: In the GCP Navigation Menu, navigate to Compute Engine > VM instances. Ensure the VM instance is active. If not, click Start/resume in the instance's menu. Copy External IP address of the instance.
+- **Establish SSH Connection**: Open a terminal in your local machine. Use the following command, replacing ~/.ssh with the path you use to store public- and private keys. Replace USERNAME with your GCP username and EXTERNALIP with the copied IP, confirm  the connection when prompted.
 ```sh
 ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
@@ -71,10 +63,10 @@ You have now successfully established an SSH tunnel to your VM instance and can 
 ### Connection refused
 **Firewall**: Ensure SSH port (22 by default) is open in the VM's firewall rules.
 
-**SSH service**: Verify SSH service is running on the VM using sudo systemctl status sshd. If not, start it with sudo systemctl start sshd.
+**SSH service**: Verify SSH service is running on the VM using 'sudo systemctl status sshd'. If not, start it with 'sudo systemctl start sshd'.
 
 ### Permission denied (publickey)
-**Key permissions**: Ensure private key is readable only by you: chmod 600 ~/.ssh/CGPkey.
+**Key permissions**: Ensure private key is readable only by you: 'chmod 600 ~/.ssh/CGPkey' (adjust path and keyname if needed).
 
 **Authorized_keys**: Verify your public key is added to the authorized_keys file on the VM (usually located at ~/.ssh/).
 
