@@ -5,6 +5,7 @@ This guide walks you through creating a Virtual Machine (VM) instance in Google 
 #### Prerequisits
 
 Google account
+
 Access to [Google Cloud Platform](https://console.cloud.google.com)
 
 ## Generate public- and private key
