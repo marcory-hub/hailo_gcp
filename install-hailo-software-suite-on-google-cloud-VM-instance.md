@@ -6,77 +6,71 @@ This guide continues from [Part 1: Create Google Cloud Platform VM Instance and 
 
 ## Install Docker
 
-1. Open a terminal in your local machine. Use the following command, replacing USERNAME with your GCP username and EXTERNALIP with the copied IP. Confirm  the connection when prompted.
+1. Open a terminal in your local machine. Use the following command, replacing USERNAME with your GCP username and EXTERNALIP with the copied External IP from the VM instance. Confirm the connection when prompted.
 
 ```sh
 ssh -L 8888:localhost:8888 USERNAME@EXTERNALIP
 ```
 2. Follow the steps from the Docker website under 1 [Install using the `apt` repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
-3. Replace step 2 by this command to install the specific version of Docker Engine as required for the suite installation as Docker file:
+3. Replace step 2 by checking the VERSION_STRING in the first command (if needed replace it with a updated version). Then run these commands to install the specific version of Docker Engine as required for the suite installation as Docker file and add your user to the docker group
 ```sh
 VERSION_STRING=5:20.10.6~3-0~ubuntu-focal
 sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-buildx-plugin docker-compose-plugin
 ```
-
 ```sh
 sudo usermod -aG docker USERNAME
 ```
-4. Stop and start the VM instance
-5. to verify that the user is indeed in the docker group use the command
+4. Stop and start the VM instance. Run the following command to check if your user belongs to the docker group.
 ```sh
 groups USERNAME
 ```
 ## Install Hailo AI software suite
-1. download both the suite and PCIe driver from [Developer Zone](https://hailo.ai/developer-zone/sw-downloads/) 
-2. open a new terminal on your local computer
-3. upload the .zip file and de .deb file to you home directory with this command in your local terminal with this command. Replace local_file_path, USERNAME, EXTERNALIP and remote_path
+1. Download both the Hailo Software Suite and PCIe driver from [Developer Zone](https://hailo.ai/developer-zone/sw-downloads/) (you need to create an account on hailo.ai to access the downloads).
+2. Open a new terminal on your local computer.
+3. Upload the .zip file and de .deb file to you home directory with this command in your local terminal with this command. "local_file_path" should be replaced with the actual path to the downloaded files on the local machine. Similarly, "remote_path" should be replaced with the desired location on the VM (e.g., /home/USERNAME/)
 ```sh
 scp local_file_path USERNAME@EXTERNALIP:remote_path
 ```
-4. install the PCIe driver
+4. Install the PCIe driver
 ```sh
 sudo apt update
 sudo apt install build-essential
 sudo dpkg -i hailort-pcie-driver_4.18.0_all.deb
 ```
-5. Reboot the VM instance
+5. Reboot the VM instance and SSH into the VM instance again with these commands
 ```sh
 sudo reboot
 ```
-6. SSH into the VM instance again with, be patient and then SSH again with the command
 ```sh
 ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
-7. Extract the suite archive
+6. Extract the suite archive
 ```sh
 sudo apt install unzip
 ```
-8. then run the script - whick opens a new container, and attaches to it ("gets inside it") with this command (adjust version if needed)
 ```sh
 unzip hailo_ai_sw_suite_2024-07.1_docker.zip
 ```
-9.
+7. Then run the script - which opens a new container and get inside the container with this command (adjust version if needed). The script might take a while to download and set up the container.
 ```sh
 ./hailo_ai_sw_suite_docker_run.sh
 ```
-You can likely ignore the Xauthority error as it's not crucial for non-graphical applications.
+You can ignore the Xauthority error as it's not crucial for non-graphical applications.
 
-
-to see the installed packages
+Exit docker with the `exit` command. Go back to the docker container with this command
+```sh
+./hailo_ai_sw_suite_docker_run.sh --resume
+```
+8. To test the hailo suite you can test the following command to give a list of available commands or to see the installed packages
+```sh
+hailo -h
+```
 ```sh
 pip list | grep hailo
 ```
 
-to see the list of available commands
-```sh
-hailo -h
-```
 
-exit docker with the exit command
-Go back to the docker container use
-```sh
-./hailo_ai_sw_suite_docker_run.sh --resume
-```
+
 
 
 
