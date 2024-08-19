@@ -4,6 +4,8 @@
 
 This guide continues from [Part 1: Create Google Cloud Platform VM Instance and Connect via SSH](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md), assuming you've successfully set up a virtual machine (VM instance) on Google Cloud Platform (GCP) and established a secure SSH connection to it. In this part, we installing the Hailo Software Suite on the VM.
 
+You don't need to install the Hailo-RT PCIe driver for DFC model creation on the Pi kit. This driver is specifically for interacting with the Hailo-8L device over the PCIe interface. DFC works independently and doesn't require the driver in the cloud. Therefore, you can safely ignore any related error messages.
+
 ## Install Docker
 
 1. Open a terminal in your local machine. Use the following command, replacing USERNAME with your GCP username and EXTERNALIP with the copied External IP from the VM instance. Confirm the connection when prompted.
@@ -31,27 +33,26 @@ groups USERNAME
 ```sh
 scp local_file_path USERNAME@EXTERNALIP:remote_path
 ```
-4. Install the PCIe driver
+4. Install the PCIe driver (optional). Reboot the VM instance and SSH into the VM instance again and SSH into the VM instance again.
 ```sh
 sudo apt update
 sudo apt install build-essential
 sudo dpkg -i hailort-pcie-driver_4.18.0_all.deb
 ```
-5. Reboot the VM instance and SSH into the VM instance again with these commands
 ```sh
 sudo reboot
 ```
 ```sh
 ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
-6. Extract the suite archive
+5. Extract the suite archive
 ```sh
 sudo apt install unzip
 ```
 ```sh
 unzip hailo_ai_sw_suite_2024-07.1_docker.zip
 ```
-7. Then run the script - which opens a new container and get inside the container with this command (adjust version if needed). The script might take a while to download and set up the container.
+6. Then run the script - which opens a new container and get inside the container with this command (adjust version if needed). The script might take a while to download and set up the container.
 ```sh
 ./hailo_ai_sw_suite_docker_run.sh
 ```
@@ -61,7 +62,7 @@ Exit docker with the `exit` command. Go back to the docker container with this c
 ```sh
 ./hailo_ai_sw_suite_docker_run.sh --resume
 ```
-8. To test the hailo suite you can test the following command to give a list of available commands or to see the installed packages
+7. To test the hailo suite you can test the following command to give a list of available commands or to see the installed packages
 ```sh
 hailo -h
 ```
