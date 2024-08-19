@@ -27,9 +27,10 @@ sudo usermod -aG docker USERNAME
 groups USERNAME
 ```
 ## Install Hailo AI software suite
-1. Download both the Hailo Software Suite and PCIe driver from [Developer Zone](https://hailo.ai/developer-zone/sw-downloads/) (you need to create an account on hailo.ai to access the downloads).
+1. Access the Hailo Developer Zone: [Developer Zone](https://hailo.ai/developer-zone/sw-downloads/)(account creation required).
+Optional: Download the PCIe driver. It's not necessary for a Google Cloud Platform (GCP) VM instance because these instances lack Hailo hardware.
 2. Open a new terminal on your local computer.
-3. Upload the .zip file and de .deb file to you home directory with this command in your local terminal with this command. "local_file_path" should be replaced with the actual path to the downloaded files on the local machine. Similarly, "remote_path" should be replaced with the desired location on the VM (e.g., /home/USERNAME/)
+3. Upload the .zip file (and .deb file if working on a hailo-device) to you home directory with this command in your local terminal with this command. "local_file_path" should be replaced with the actual path to the downloaded files on the local machine. Similarly, "remote_path" should be replaced with the desired location on the VM (e.g., /home/USERNAME/)
 ```sh
 scp local_file_path USERNAME@EXTERNALIP:remote_path
 ```
@@ -45,7 +46,7 @@ sudo reboot
 ```sh
 ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
-5. Extract the suite archive
+5. Extract the Hailo Software Suite archive
 ```sh
 sudo apt install unzip
 ```
