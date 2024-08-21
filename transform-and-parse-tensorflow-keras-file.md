@@ -7,6 +7,9 @@ This guide provides a step-by-step process for transforming and parsing a Tensor
 - Installed Hailo Software Suite [Install Hailo SW Suite on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
 - Basic knowledge of Jupyter Notebooks
 
+- **input**: keras_model.h5
+- **output**: keras_model_hailo_model.har
+
 ## Create a TensorFlow Keras file with Teachable Machine
 
 1. Create a  [Teachable Machine](https://teachablemachine.withgoogle.com/) Model: follow the instruction on the website to train your model. You can optionally adjust training parameters like epochs, batch size, and learning rate for better performance. You find this option under the advanced option.
@@ -43,7 +46,7 @@ Now let's do it with your keras_model.h5 file. You can add the code blocks under
 
 1. Import necessary libraries for running the script within the Jupyter Notebook environment.
 ```sh
-# General imports used throughout the tutorial
+# General imports used for transformation, parsing and visualization
 import tensorflow as tf
 from IPython.display import SVG # Scalable Vector Graphics for visualization in Jupyter notebook
  
@@ -51,7 +54,7 @@ from IPython.display import SVG # Scalable Vector Graphics for visualization in 
 from hailo_sdk_client import ClientRunner
 ```
 ```sh
-# Adjust the harware architecture to hailo8l
+# Adjust the hardware architecture to hailo8l
 chosen_hw_arch = "hailo8l"
 ```
 2. Update model_name and model_path.
@@ -73,25 +76,35 @@ converter.target_spec.supported_ops = [
 # Convert the model
 tflite_model = converter.convert()  # may cause warnings, ignore them
 
-# Save the TFLite model
+# Save the converted TFLite model
 tflite_model_path = "../models/keras_model.tflite"
 with tf.io.gfile.GFile(tflite_model_path, "wb") as f:
     f.write(tflite_model)
 ```
 4. Translate TFLite to Hailo format (using ClientRunner)
+This part loads the TFLite model, creates a ClientRunner instance, translates the TFLite model to the Hailo format and saves the translated model as a HAR file. Then it visualizes the Hailo model using the Hailo Visualize and displays the SVG visualization of the model. 
 ```sh
-# Update the path to the TFLite model
+# Path to the TensorFlow Lite model
 tflite_model_path = "../models/keras_model.tflite"
-model_name = "keras_model"  # Choose a name for the Hailo model
 
+# Name for the Hailo model
+model_name = "keras_model"
+
+# Create a ClientRunner instance to interact with the Hailo hardware
 runner = ClientRunner(hw_arch=chosen_hw_arch)
-hn, npz = runner.translate_tf_model(tflite_model_path, model_name)
 
+# Translate the TFLite model to the Hailo format and get the model handle and weights
+hailo_model_handle, npz_weights = runner.translate_tf_model(tflite_model_path, model_name)
+
+# Save the translated Hailo model as a HAR file
 hailo_model_har_name = f"{model_name}_hailo_model.har"
 runner.save_har(hailo_model_har_name)
 
+# Visualize the Hailo model using the Hailo Visualizer
 !hailo visualizer {hailo_model_har_name} --no-browser
-SVG("keras_model.svg")  
+
+# Display the SVG visualization of the Hailo model
+SVG("keras_model.svg")
 ```
 
 
