@@ -1,7 +1,7 @@
 # hailo
 
 ## How to Install and test Hailo SW Suite Without Required Hardware
-Raspberry Pi 5 with AI-kit Hailo8L accelerator experiments: Google Cloud Platform Setup and test it with a model you made on Teachable Machine.
+Raspberry Pi 5 with AI-kit Hailo8L accelerator experiments: Google Cloud Platform Setup and test it with a model  made on Teachable Machine.
 
 ### [Create Google Cloud Platform VM Instance and Connect via SSH](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
 
