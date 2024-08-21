@@ -13,6 +13,6 @@ Installing the Hailo Software Suite as a Docker file on the Google Cloud VM inst
 
 
 ### [Hailo GCP Transforming and Parsing a Tensorflow Keras file (made with Teachable Machine)](https://github.com/marcory-hub/hailo/blob/main/transform-and-parse-tensorflow-keras-file.md)
-Transforming and parsing a TensorFlow Keras model and use Teachable Machine as a quick method to make aTensorFlow .h5 file.
+Transforming and parsing a TensorFlow Keras model and use Teachable Machine as a quick method to make a TensorFlow .h5 file.
 
 
