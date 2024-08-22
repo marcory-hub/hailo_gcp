@@ -12,7 +12,7 @@ Initial setup of a virtual environment for Hailo8L accelerator experiments. It i
 Installing the Hailo Software Suite as a Docker file on the Google Cloud VM instance.
 
 
-### [Hailo GCP Transforming and Parsing a Tensorflow Keras file (made with Teachable Machine)](https://github.com/marcory-hub/hailo/blob/main/transform-and-parse-tensorflow-keras-file.md)
+### [Transforming and Parsing a Tensorflow Keras file (made with Teachable Machine) with Hailo suite on GCP](https://github.com/marcory-hub/hailo/blob/main/transform-and-parse-tensorflow-keras-file.md)
 Transforming and parsing a TensorFlow Keras model and use Teachable Machine as a quick method to make a TensorFlow .h5 file.
 
 
