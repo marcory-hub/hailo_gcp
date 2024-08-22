@@ -35,7 +35,7 @@ scp /PATH_TO/keras_model.h5 USERNAME@EXTERNALIP:/tmp/keras_model.h5
 ```
 3. Identify and copy the model to the docker container. List all Docker containers and identify the Hailo envirionment with this command.
 ```sh
-docker ps -a
+sudo docker ps -a
 ```
 4. Copy the uploaded model from the VM's temp directory to the container with this command (replace CONTAINER_ID with the Docker container ID you identified).
 ```sh
