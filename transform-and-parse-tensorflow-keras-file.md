@@ -1,6 +1,6 @@
 # Transforming and Parsing a Tensorflow Keras file (made with Teachable Machine) with Hailo suite on GCP 
 
-This guide provides a step-by-step process for transforming and parsing a TensorFlow Keras model created with Teachable Machine using the Hailo Dataflow Compiler. The process involves training a model on Teachable Machine, downloading it in Keras format, open the Google Cloud VM instance and resume the Docker container, and transferring the model to the VM for further processing.
+This guide provides a step-by-step process for transforming and parsing a TensorFlow Keras model created with Teachable Machine using the Hailo Dataflow Compiler (from the Hailo Software Suite). The process involves training a model on Teachable Machine and downloading the model in Keras format. Then open the Google Cloud VM instance and resume the Docker container and transferring the model to the VM for further processing.
 
 
 - **input**: keras_model.h5
