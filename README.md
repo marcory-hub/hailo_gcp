@@ -1,7 +1,7 @@
 # hailo
 
 ## How to Install and test Hailo SW Suite Without Required Hardware
-Raspberry Pi 5 with AI-kit Hailo8L accelerator experiments: Google Cloud Platform Setup and test it with a model  made on Teachable Machine.
+Raspberry Pi 5 with AI-kit Hailo8L accelerator experiments for computer vision: Google Cloud Platform Setup and test transformation, parsing, and optimization with the Hailo Software Suite with a model trained on Teachable Machine.
 
 ### [Create Google Cloud Platform VM Instance and Connect via SSH](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
 
@@ -13,6 +13,6 @@ Installing the Hailo Software Suite as a Docker file on the Google Cloud VM inst
 
 
 ### [Transforming and Parsing a Tensorflow Keras file (made with Teachable Machine) with Hailo suite on GCP](https://github.com/marcory-hub/hailo/blob/main/transform-and-parse-tensorflow-keras-file.md)
-Transforming and parsing a TensorFlow Keras model and use Teachable Machine as a quick method to make a TensorFlow .h5 file.
+Teachable Machine can be used as a quick method to create a TensorFlow .h5 file, which can then be transformed and parsed for further use. To create a Teachable Machine model, you can use your own dataset of images or download a public dataset (for example from Kaggle).
 
 
