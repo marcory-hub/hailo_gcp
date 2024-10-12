@@ -25,8 +25,16 @@ This guide provides a basic configuration. You might need to adjust settings bas
 1. **Create or Select a Project**: Creat a NEW PROJECT or use an excisting project in Google Cloud Platform (cloud.google.com)
 2. **Create VM instance**: In the Navigation Menu (top left) navigate to Compute Engine > VM instances > click CREATE INSTANCE (top middel)
 3. **Configure the VM instance**: 
-**Name**: choose a descriptive name for your VM. **Region/Zone**: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability). **Machine configuration**: select E2, select e2-standard-32gb (16gb to save costs), available policies (optional): GCP offers Spot VMs for lower costs. However, these VMs can be interrupted if needed by GCP, but 60-90% discount. **Boot disk**: Operating system: select Ubuntu 20.04. Optional: Boot disk type: select Standard persistent disk to save costs. Size (GB): 500 GB and resize upwars later if needed. Downgrading size is not possible. **Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser).
-4. Click CREATE
+**Name**: choose a descriptive name for your VM.
+
+**Region/Zone**: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability). 
+
+**Machine configuration**: select E2, select e2-standard-32gb (16gb to save costs), available policies (optional): GCP offers Spot VMs for lower costs. However, these VMs can be interrupted if needed by GCP, but 60-90% discount. 
+
+**Boot disk**: Operating system: select Ubuntu 20.04. Optional: Boot disk type: select Standard persistent disk to save costs. Size (GB): 500 GB and resize upwars later if needed. Downgrading size is not possible. 
+
+**Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser).
+5. Click CREATE
 
 ## Upload public key to CGP
 
