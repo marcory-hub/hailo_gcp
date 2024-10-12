@@ -1,7 +1,11 @@
 # How to Install Hailo SW Suite Without Required Hardware (Part 1/2)
 
 ## Create Google Cloud Platform VM Instance and Connect via SSH
-This guide is for Raspberry Pi 5 Hailo-8L AI-kit owners who lack the necessary hardware to install the Hailo Software Suite. Part 1 focuses on setting up a virtual environment by creating a Virtual Machine (VM) instance on Google Cloud Platform (GCP) and establishing a secure SSH connection to it from your local terminal. Once connected, you'll be able to interact with the VM as if it were a local machine and proceed with the Hailo SW suite installation in Part 2.
+This guide explains how to create a virtual environment on Google Cloud Platform (GCP) to install the Hailo Software Suite (SW Suite) even if you don't have the 
+
+Part 1 focuses on setting up a virtual environment by creating a Virtual Machine (VM) instance on Google Cloud Platform (GCP) and establishing a secure SSH connection to it from your local terminal. 
+
+Once connected, you'll be able to interact with the VM as if it were a local machine and proceed with the Hailo SW suite installation in Part 2.
 
 #### Prerequisits
 
