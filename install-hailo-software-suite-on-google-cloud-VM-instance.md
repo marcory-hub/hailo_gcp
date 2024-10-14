@@ -51,7 +51,7 @@ ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 sudo apt install unzip
 ```
 ```sh
-unzip hailo_ai_sw_suite_2024-07.1_docker.zip
+unzip hailo_ai_sw_suite_2024-10_docker.zip
 ```
 6. Then run the script - which opens a new container and get inside the container with this command (adjust version if needed). The script might take a while to download and set up the container.
 ```sh
