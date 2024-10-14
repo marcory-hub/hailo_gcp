@@ -57,7 +57,7 @@ unzip hailo_ai_sw_suite_2024-10_docker.zip
 ```sh
 ./hailo_ai_sw_suite_docker_run.sh
 ```
-You can ignore the Xauthority error as it's not crucial for non-graphical applications.
+You can drink some coffee or tea and ignore the Xauthority error as it's not crucial for non-graphical applications.
 
 Exit docker with the `exit` command. Go back to the docker container with this command
 ```sh
