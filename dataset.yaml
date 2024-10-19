@@ -1,0 +1,5 @@
+train: /content/data/train # train images 
+val: /content/data/val # val images 
+
+nc: 3
+names: ['Vespa_velutina', 'Vespa_crabro', 'Vespula_vulgaris']
