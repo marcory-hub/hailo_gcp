@@ -28,7 +28,7 @@
 ## 1. Prepare Dataset
 
 Gather images containing the objects you want to detect.
-Annotate these images using a tool like CVAT in YOLO1.1 format (bounding boxes and class labels).
+Annotate these images using a tool like CVAT in YOLO1.1 format (bounding boxes and class labels). Or use the [hornet3000+](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris) dataset that is annotated in YOLO1.1 format.
 
 ## 2. [Make YOLOv8s Model on Colab](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb)
 
