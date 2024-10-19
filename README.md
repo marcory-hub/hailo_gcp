@@ -1,18 +1,50 @@
 # hailo
 
-## How to Install and test Hailo SW Suite Without Required Hardware
-Raspberry Pi 5 with AI-kit Hailo8L accelerator experiments for computer vision: Google Cloud Platform Setup and test transformation, parsing, and optimization with the Hailo Software Suite with a model trained on Teachable Machine.
+## Training a Custom YOLOv8 Model for Raspberry Pi 5 with Hailo-8L AI kit
 
-### [Create Google Cloud Platform VM Instance and Connect via SSH](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
+#### How to 
+- Train a YOLOv8 model from the Hailo Model Zoo with your custom dataset in Google Colab 
+- Optimize and compile it with a docker installation of the Hailo Software Suite on Google Cloud Platform (GCP) and 
+- Deploy you custom YOLOv8 model on a Raspberry Pi 5 equipped with the Hailo-8L AI kit.
 
-Initial setup of a virtual environment for Hailo8L accelerator experiments. It involves creating a Virtual Machine (VM) instance on Google Cloud Platform (GCP) and establishing a secure SSH connection to it. Once connected, you can interact with the VM as if it were a local machine. This provides a foundation for installing the Hailo Software Suite in the subsequent part.
+#### Benefits
+- No local x86 Unix training computer needed.
+- Free Training: Utilize free GPU resources in Colab for efficient training.
+- Customizable Model: Train a model to detect objects specific to your needs.
+- Hailo-8L Acceleration: Achieve faster and efficient inference on your Raspberry Pi 5.
 
+#### Prerequisites
+- Familiarity with Python and basic object detection concepts.
+- A Google account (for Colab and GCP).
+- Raspberry Pi 5 with Hailo-8L AI kit installed. For instructions see [How to Set Up Raspberry Pi 5 and Hailo-8L](https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/doc/install-raspberry-pi5.md#how-to-set-up-raspberry-pi-5-and-hailo-8l)
+- Utilize the basic detection pipeline. For instructions see [Hailo RPi5 Basic Pipelines](https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/doc/basic-pipelines.md#installation)
 
-### [Install Hailo Software Suite on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
-Installing the Hailo Software Suite as a Docker file on the Google Cloud VM instance.
+# Steps
+1. [Prepare Dataset](prepair-dataset)
+2. [Make a YOLOv8 Model in Colab](make-a-yolov8-model-in-colab)
+3. [Create a Virtual Machine in Google Cloud Platform](create-a-virtual-machine-in-google-cloud-platform)
+4. [Docker Install Hailo Software Suite](docker-install-software-suite)
+## 1. Prepare Dataset
 
+Gather images containing the objects you want to detect.
+Annotate these images using a tool like CVAT in YOLO1.1 format (bounding boxes and class labels).
 
-### [Transforming and Parsing a Tensorflow Keras file (made with Teachable Machine) with Hailo suite on GCP](https://github.com/marcory-hub/hailo/blob/main/transform-and-parse-tensorflow-keras-file.md)
-Teachable Machine can be used as a quick method to create a TensorFlow .h5 file, which can then be transformed and parsed for further use. To create a Teachable Machine model, you can use your own dataset of images or download a public dataset (for example from Kaggle).
+## 2. [Make YOLOv8s Model on Colab](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb)
 
+Follow this notebook [hailo_YOLOv8s Google Colab notebook](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb) to train a YOLOv8 model using your custom dataset in Colab. The training process will generate a **best.onnx** file, which represents your trained model. 
 
+Do not forget to download the model before you stop the notebook.
+
+## 3. [Create a Virtual Machine in Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
+
+While Colab offers free GPU resources, the virtual machine (VM) is needed to do the docker install of the Hailo Software Suite. 
+
+## 4. [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
+The suite installation as a Docker file is needed for step 5 optimizing and conversion.
+
+## 5. [Compile the Model using Hailo Model Zoo]
+Use Hailo Model Zoo within the Docker container to convert your model to a Hailo-optimized format (yolov8s.hef).
+
+## 6. [Deploy Model on Raspberry Pi 5]
+
+Transfer the Hailo Executable File **yolov8s.hef** file to your Raspberry Pi 5. This will involve setting up the Hailo runtime environment and integrating your model into your application.
