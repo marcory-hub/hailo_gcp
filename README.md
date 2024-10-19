@@ -42,7 +42,7 @@ While Colab offers free GPU resources, the virtual machine (VM) is needed to do 
 ## 4. [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
 The suite installation as a Docker file is needed for step 5 optimizing and conversion.
 
-## 5. [Compile the Model using Hailo Model Zoo]
+## 5. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md)
 Use Hailo Model Zoo within the Docker container to convert your model to a Hailo-optimized format (yolov8s.hef).
 
 ## 6. [Deploy Model on Raspberry Pi 5]
