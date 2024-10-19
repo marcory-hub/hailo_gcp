@@ -20,10 +20,11 @@
 - Utilize the basic detection pipeline. For instructions see [Hailo RPi5 Basic Pipelines](https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/doc/basic-pipelines.md#installation)
 
 # Steps
-1. [Prepare Dataset](prepair-dataset)
-2. [Make a YOLOv8 Model in Colab](make-a-yolov8-model-in-colab)
-3. [Create a Virtual Machine in Google Cloud Platform](create-a-virtual-machine-in-google-cloud-platform)
-4. [Docker Install Hailo Software Suite](docker-install-software-suite)
+1. Prepare Dataset
+2. Make a YOLOv8 Model in Colab
+3. Create a Virtual Machine in Google Cloud Platform
+4. Docker Install Hailo Software Suite
+
 ## 1. Prepare Dataset
 
 Gather images containing the objects you want to detect.
