@@ -45,6 +45,6 @@ The suite installation as a Docker file is needed for step 5 optimizing and conv
 ## 5. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md)
 Use Hailo Model Zoo within the Docker container to convert your model to a Hailo-optimized format (yolov8s.hef).
 
-## 6. [Deploy Model on Raspberry Pi 5]
+## 6. [Deploy Model on Raspberry Pi 5](https://github.com/marcory-hub/hailo/blob/main/deploy-model-on-raspberry-pi-5-ai-kit.md)
 
 Transfer the Hailo Executable File **yolov8s.hef** file to your Raspberry Pi 5. This will involve setting up the Hailo runtime environment and integrating your model into your application.
