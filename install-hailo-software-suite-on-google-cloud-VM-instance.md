@@ -1,6 +1,6 @@
 # Install Hailo Software Suite on Google Cloud Platform
 
-This guide continues from [Part 1: Create Google Cloud Platform VM Instance and Connect via SSH](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md), assuming you've successfully set up a virtual machine (VM instance) on Google Cloud Platform (GCP) and established a secure SSH connection to it. In this part, we installing the Hailo Software Suite on the VM.
+This guide continues from [Create a Virtual Machine in Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md), assuming you've successfully set up a virtual machine (VM instance) on Google Cloud Platform (GCP) and established a secure SSH connection to it. In this part, we installing the Hailo Software Suite on the VM.
 
 You don't need to install the Hailo-RT PCIe driver for DataFlow Compiler (DFC) model creation on the Pi kit. This driver is specifically for interacting with the Hailo-8L device over the PCIe interface. DFC works independently and doesn't require the driver in the cloud. Therefore, you can safely ignore any related error messages.
 
