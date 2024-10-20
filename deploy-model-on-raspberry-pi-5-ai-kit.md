@@ -18,7 +18,7 @@ Example `yolov8s_labels.json`:
 ```
 {
     "detection_threshold": 0.5,
-    "max_boxes":4,
+    "max_boxes":200,
     "labels": [
       "Vespa_velutina",
       "Vespa_crabro",
