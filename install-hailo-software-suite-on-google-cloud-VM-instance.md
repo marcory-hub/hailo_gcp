@@ -9,7 +9,7 @@ You don't need to install the Hailo-RT PCIe driver for DataFlow Compiler (DFC) m
 1. Open a terminal in your local machine. Use the following command, replacing USERNAME with your GCP username and EXTERNALIP with the copied External IP from the VM instance. Confirm the connection when prompted.
 
 ```sh
-ssh -L 8888:localhost:8888 USERNAME@EXTERNALIP
+ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 ```
 2. Follow the steps from the Docker website under 1 [Install using the `apt` repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 3. Replace step 2 by checking the VERSION_STRING in the first command (if needed replace it with a updated version). Then run these commands to install the specific version of Docker Engine as required for the suite installation as Docker file and add your user to the docker group
