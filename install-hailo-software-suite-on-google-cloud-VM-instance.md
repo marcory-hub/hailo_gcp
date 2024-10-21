@@ -68,7 +68,7 @@ hailo -h
 ```sh
 pip list | grep hailo
 ```
-Continue with [Deploy Model on Raspberry Pi 5](https://github.com/marcory-hub/hailo/blob/main/deploy-model-on-raspberry-pi-5-ai-kit.md).
+Continue with [Compiling YOLOv8 Model with Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md).
 
 
 
