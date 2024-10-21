@@ -64,9 +64,11 @@ Continue with [Docker Install of the Hailo Software Suite](https://github.com/ma
 **SSH service**: Verify SSH service is running on the VM using `sudo systemctl status sshd`. If not, start it with `sudo systemctl start sshd`.
 
 ### Permission denied (publickey)
-**Key permissions**: Ensure private key is readable only by you: `chmod 600 ~/.ssh/CGPkey` (adjust path and keyname if needed).
+**Public Key**: make sure you have copied the whole pub key. The key starts with ssh-rsa and ends with your ==USERNAME. Usually your key is located at ~/.ssh/.
 
-**Authorized_keys**: Verify your public key is added to the authorized_keys file on the VM (usually located at ~/.ssh/).
+**Authorized_keys**: Verify your public key is added to metadata the authorized_keys file on the VM.
+
+**SSH KEYS**: Make sure you added the key under `Compute Engine` -> `Settings`-`Metadata`-> `SSH KEYS` (and not under METADATA)
 
 ### Connection timed out
 **Network connectivity**: Check your internet connection and network configuration.
