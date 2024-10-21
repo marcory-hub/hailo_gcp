@@ -58,6 +58,9 @@ Continue with [Docker Install of the Hailo Software Suite](https://github.com/ma
 
 ## Troubleshooting 
 
+### General
+**Copy hailo zip to VM**: Ensure you are in you local terminal (and not the VM terminal).
+
 ### Connection refused
 **Firewall**: Ensure SSH port (22 by default) is open in the VM's firewall rules.
 
