@@ -99,12 +99,14 @@ distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 ```
-3. Install CUDA 11.8
-During the installation, make sure to uncheck the driver installation option, as we've already installed driver 525:
+3. Install CUDA 11.8.
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run
 sudo sh cuda_11.8.0_520.61.05_linux.run
 ```
+- Existing package manager installation of the driver found. It is strongly --> select `continue`
+- Cuda installer --> make sure to uncheck the driver  as we've already installed driver 525.
+- Then select `install`installation option.
 4. Set up environment variables. Add the following lines to your ~/.bashrc file:
 ```sh
 echo 'export PATH=/usr/local/cuda-11.8/bin:$PATH' >> ~/.bashrc
