@@ -1,6 +1,6 @@
-# Deploy Model on Raspberry Pi 5 AI kit with Hailo-8L accelerator
+# 3.2 Deploy Model on Raspberry Pi 5 AI kit with Hailo-8L accelerator
 
-#### Before you begin:
+#### Prerequisits
 - Ensure you have a Raspberry Pi 5 with the Hailo-8L AI kit installed. Refer to the official guide for setup instructions: [How to Set Up Raspberry Pi 5 and Hailo-8L](https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/doc/install-raspberry-pi5.md#how-to-set-up-raspberry-pi-5-and-hailo-8l)
 - Familiarize yourself with the basic detection pipeline provided by Hailo: [Hailo RPi5 Basic Pipelines](https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/doc/basic-pipelines.md#installation)
 
