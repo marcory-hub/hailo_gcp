@@ -1,12 +1,12 @@
 # B.2. Hailo Software Suite in NVIDIA Docker installation
 
-Following NVIDIA GPU installation ([B.1.]()), we'll delve into the setup of the Docker Hailo Software Suite and the necessary steps to enable Docker's utilization of the GPU.
+Following NVIDIA GPU installation ([B.1.](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-installation-in-gcp.md)), we'll delve into the setup of the Docker Hailo Software Suite and the necessary steps to enable Docker's utilization of the GPU.
 
 #### Prerequisits 
 - Google account
 - Paid subscription to Google Cloud Platform (GCP)
 - Access to Hailo Developer Zone
-- GCP Compute Engine with NVIDIA GPUs and Docker (see [B.1.]())
+- GCP Compute Engine with NVIDIA GPUs and Docker (see [B.1.](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-installation-in-gcp.md))
 
 ## Steps
 1. Docker Install of the Hailo Software Suite
@@ -14,7 +14,7 @@ Following NVIDIA GPU installation ([B.1.]()), we'll delve into the setup of the 
 
 
 ## 1. Docker Install of the Hailo Software Suite
-1. Access the Hailo Developer Zone: [Developer Zone](https://hailo.ai/developer-zone/sw-downloads/)(account creation required).
+1. Access the Hailo Developer Zone: [Developer Zone] (https://hailo.ai/developer-zone/sw-downloads/)(_account creation required_).
 2. Download the latest Software Suite (Latest releases):
 - Software package: AI Software Suite
 - Software subpackage: AI Software Suite

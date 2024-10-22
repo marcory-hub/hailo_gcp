@@ -134,4 +134,4 @@ Adjust the command as needed to run the container:
 docker run --gpus all -it hailo_ai_sw_suite_2024-10:1
 ```
 
-Continue with [B.2 Hailo Software Suite in NVIDIA Docker installation]().
+Continue with [B.2 Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite).

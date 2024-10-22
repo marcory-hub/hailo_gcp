@@ -24,14 +24,7 @@
 2. Docker Install Hailo Software Suite
 #### **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
 1. Using NVIDIA GPUs with Docker on Google Cloud Platform
-- Create a VM
-- Generate and upload public key to GCP
-- Use private key to connect VM with local terminal
-- Install Docker
-- NVIDIA Docker Installation
 2. Hailo Software Suite in NVIDIA Docker installation
-- Docker Install of the Hailo Suite Software
-- Use Hailo Suite in Docker container with NVIDIA GPUs
 ### 3. Compile and Deploy your model
 1. Compile the Model using Hailo Model Zoo
 2. Deploy Model on Raspberry Pi 5
@@ -50,21 +43,26 @@ Annotate these images using a tool like [CVAT](https://www.cvat.ai/) in YOLO1.1 
 Follow this notebook [hailo_YOLOv8s Google Colab notebook](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb) to train a YOLOv8 model using your custom dataset in Colab. The training process will generate a **best.onnx** file, which represents your trained model. 
 
 Do not forget to download the model before you stop the notebook.
+## **Option A:** Free exploration of Hailo Software Suite (_no GPU_)
 
 ## A.1. [Create a Virtual Machine in Google Cloud Platform (no GPU)](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
 _If you're using pay-as-you-go GPU instances, you can skip this section_.
 
-While Colab offers free GPU resources, the virtual machine (VM) is needed to do the docker install of the Hailo Software Suite. A GPU is not available in the Free Trial. Step 3 and 4 are usefull to get familiar with the VM, but does not optimize you model in step 6.
+While Colab offers free GPU resources, the virtual machine (VM) is needed to do the docker install of the Hailo Software Suite. A GPU is not available in the Free Trial.
 
 ## A.2. [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
 _If you're using pay-as-you-go GPU instances, you can skip this section_.
 
 The suite installation as a Docker file is needed for step 6 optimizing and conversion.
 
-## B.1. [NVIDIA Docker installation in GCP (_with GPU_)]()
+## **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
+
+## B.1. [Using NVIDIA GPUs with Docker on Google Cloud Platform]()
 _If you're NOT using pay-as-you-go GPU instances, you can skip this section_.
 
 Optimize and compile a yolo model with a Dockerized Hailo Software Suite on Google Cloud Platform (GCP) using T4 GPU instances.
+## B.2.[Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite)
+_If you're NOT using pay-as-you-go GPU instances, you can skip this section_.
 
 ## 3.1. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md)
 Use Hailo Model Zoo within the Docker container to convert your model to a Hailo-optimized format (`yolov8s.hef`).
