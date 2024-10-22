@@ -35,13 +35,14 @@ sudo apt install unzip
 ```sh
 unzip hailo_ai_sw_suite_2024-10_docker.zip
 ```
-6. Then run the script - which opens a new container and get inside the container with this command. The script might take a while to download and set up the container.
+Adjust the versionname of the sw_suite as new versions are released regulary.
+7. Then run the script - which opens a new container and get inside the container with this command. The script might take a while to download and set up the container.
 ```sh
 ./hailo_ai_sw_suite_docker_run.sh
 ```
 You can drink some coffee or tea and ignore the Xauthority error as it's not crucial for non-graphical applications.
 
-7. Exit docker with the `exit` command. 
+8. Exit docker with the `exit` command. 
 
 ## 2. Use Docker with NVIDIA GPU
 
