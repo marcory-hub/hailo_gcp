@@ -55,7 +55,7 @@ _If you're using pay-as-you-go GPU instances, you can skip this section_.
 
 ## **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
 
-## B.1. [Using NVIDIA GPUs with Docker on Google Cloud Platform]()
+## B.1. [Using NVIDIA GPUs with Docker on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-installation-in-gcp.md)
 _If you're NOT using pay-as-you-go GPU instances, you can skip this section_.
 
 Optimize and compile a yolo model with a Dockerized Hailo Software Suite on Google Cloud Platform (GCP) using T4 GPU instances.
