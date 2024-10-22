@@ -1,15 +1,15 @@
 # Create Google Cloud Platform VM Instance and Connect via SSH
 
-This guide explains how to create a virtual environment on Google Cloud Platform (GCP) to install the Hailo Software Suite (SW Suite) even if you don't have the 
+This guide explains how to create a virtual environment on Google Cloud Platform (GCP) to install the Hailo Software Suite (SW Suite) even if you don't have the hardware requirements.
 
-Part 1 focuses on setting up a virtual environment by creating a Virtual Machine (VM) instance on Google Cloud Platform (GCP) and establishing a secure SSH connection to it from your local terminal. 
+This part focuses on setting up a virtual environment by creating a Virtual Machine (VM) instance on Google Cloud Platform (GCP) and establishing a secure SSH connection to it from your local terminal. 
 
-Once connected, you'll be able to interact with the VM as if it were a local machine and proceed with the Hailo SW suite installation in Part 2.
+Once connected, you'll be able to interact with the VM as if it were a local machine and proceed with the Hailo SW suite installation.
 
 #### Prerequisits
 
 - Google account
-- Access to [Google Cloud Platform](https://console.cloud.google.com)
+- Access to [Google Cloud Platform](https://console.cloud.google.com) (Free trail)
 
 ## Generate public- and private key
 
