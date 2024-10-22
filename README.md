@@ -53,8 +53,6 @@ While Colab offers free GPU resources, the virtual machine (VM) is needed to do 
 ## A.2. [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
 _If you're using pay-as-you-go GPU instances, you can skip this section_.
 
-The suite installation as a Docker file is needed for step 6 optimizing and conversion.
-
 ## **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
 
 ## B.1. [Using NVIDIA GPUs with Docker on Google Cloud Platform]()
