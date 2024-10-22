@@ -13,7 +13,7 @@ This guide provides steps for setting up a GCP Compute Engine instance with GPU 
 4. Use private key to connect VM with local terminal
 5. Install Docker
 6. NVIDIA Docker Installation
-7. Run a Docker Container with GPU:
+7. Run a Docker Container with GPU
 
 ## 1. Create a VM with GPU
 
@@ -134,4 +134,4 @@ Adjust the command as needed to run the container:
 docker run --gpus all -it hailo_ai_sw_suite_2024-10:1
 ```
 
-Continue with [B.2 Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite).
+Continue with [B.2 Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite.md).
