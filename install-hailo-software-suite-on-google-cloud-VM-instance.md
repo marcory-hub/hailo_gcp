@@ -1,10 +1,21 @@
-# Install Hailo Software Suite on Google Cloud Platform
+# A.2. Docker Install of the Hailo Software Suite
+
+_If you're using pay-as-you-go GPU instances, you can skip this section._
+
+### Prerequisites
+- Installation of a VM in GCP
+- Access to Hailo Developer Zone
+
+## Steps
+1. Install Docker in the VM
+2. Install Hailo AI software suite
+3. Run a Docker Container with the Hailo Software Suite
 
 This guide continues from [Create a Virtual Machine in Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md), assuming you've successfully set up a virtual machine (VM instance) on Google Cloud Platform (GCP) and established a secure SSH connection to it. In this part, we installing the Hailo Software Suite on the VM.
 
 You don't need to install the Hailo-RT PCIe driver for DataFlow Compiler (DFC) model creation on the Pi kit. This driver is specifically for interacting with the Hailo-8L device over the PCIe interface. DFC works independently and doesn't require the driver in the cloud. Therefore, you can safely ignore any related error messages.
 
-## Install Docker
+## 1. Install Docker in the VM
 
 1. Open a terminal in your local machine. Use the following command, replacing USERNAME with your GCP username and EXTERNALIP with the copied External IP from the VM instance. Confirm the connection when prompted.
 
@@ -24,7 +35,7 @@ sudo usermod -aG docker USERNAME
 ```sh
 groups USERNAME
 ```
-## Install Hailo AI software suite
+## 2. Install Hailo AI software suite
 1. Access the Hailo Developer Zone: [Developer Zone](https://hailo.ai/developer-zone/sw-downloads/)(account creation required).
 Optional: Download the PCIe driver. It's not necessary for a Google Cloud Platform (GCP) VM instance because these instances lack Hailo hardware.
 2. Open a new terminal on your local computer.
@@ -58,6 +69,7 @@ unzip hailo_ai_sw_suite_2024-10_docker.zip
 You can drink some coffee or tea and ignore the Xauthority error as it's not crucial for non-graphical applications.
 
 Exit docker with the `exit` command. Go back to the docker container with this command
+## 3. Run a Docker Container with the Hailo Software Suite
 ```sh
 ./hailo_ai_sw_suite_docker_run.sh --resume
 ```
