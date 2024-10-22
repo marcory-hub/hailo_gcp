@@ -73,14 +73,14 @@ Exit docker with the `exit` command. Go back to the docker container with this c
 ```sh
 ./hailo_ai_sw_suite_docker_run.sh --resume
 ```
-7. To test the hailo suite you can test the following command to give a list of available commands or to see the installed packages
+1. To test the hailo suite you can test the following command to give a list of available commands or to see the installed packages
 ```sh
 hailo -h
 ```
 ```sh
 pip list | grep hailo
 ```
-Continue with [Compiling YOLOv8 Model with Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md).
+Continue with [Compiling the Model with Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md).
 
 
 
