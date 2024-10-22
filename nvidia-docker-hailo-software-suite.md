@@ -12,9 +12,8 @@ Following NVIDIA GPU installation ([B.1.](https://github.com/marcory-hub/hailo/b
 1. Docker Install of the Hailo Software Suite
 2. Use Docker with NVIDIA GPU
 
-
 ## 1. Docker Install of the Hailo Software Suite
-1. Access the Hailo Developer Zone: [Developer Zone] (https://hailo.ai/developer-zone/sw-downloads/)(_account creation required_).
+1. Access the [Hailo Developer Zone](https://hailo.ai/developer-zone/sw-downloads/)(_account creation required_).
 2. Download the latest Software Suite (Latest releases):
 - Software package: AI Software Suite
 - Software subpackage: AI Software Suite
