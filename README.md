@@ -18,14 +18,14 @@
 ### 1. Re-train a YOLOv8 model
 1. Prepare Dataset
 2. Train YOLOv8 Model in Colab
-### 2. Optimize and compile the model
+### 2. Install Docker Hailo Software Suite
 #### **Option A:** Free exploration of Hailo Software Suite (_no GPU_)
 1. Create a Virtual Machine in Google Cloud Platform 
 2. Docker Install Hailo Software Suite
 #### **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
 1. Using NVIDIA GPUs with Docker on Google Cloud Platform
 2. Hailo Software Suite in NVIDIA Docker installation
-### 3. Compile and Deploy your model
+### 3. Optimize, Compile and Deploy your model
 1. Compile the Model using Hailo Model Zoo
 2. Deploy Model on Raspberry Pi 5
 
@@ -42,7 +42,7 @@ Annotate these images using a tool like [CVAT](https://www.cvat.ai/) in YOLO1.1 
 
 Follow this notebook [hailo_YOLOv8s Google Colab notebook](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb) to train a YOLOv8 model using your custom dataset in Colab. The training process will generate a **best.onnx** file, which represents your trained model. 
 
-Do not forget to download the model before you stop the notebook.
+Do not forget to download the model to your local computer before you stop the notebook.
 ## **Option A:** Free exploration of Hailo Software Suite (_no GPU_)
 
 ## A.1. [Create a Virtual Machine in Google Cloud Platform (no GPU)](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
