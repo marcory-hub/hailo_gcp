@@ -80,7 +80,7 @@ groups USERNAME
 
 ## 6. NVIDIA Docker Installation
 
-1. Install the NVIDIA Driver 525
+1. Install the NVIDIA Driver 525:
 
 ```sh
 sudo apt install libnvidia-common-525 libnvidia-gl-525 nvidia-driver-525 -y
@@ -93,21 +93,27 @@ sudo reboot
 ssh -i ~/.ssh/KEYNAME USERNAME@EXTERNALIP
 ```
 
-2. Set up the NVIDIA Docker Repository
+2. Set up the NVIDIA Docker Repository:
 ```sh
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 ```
-3. Install CUDA 11.8.
+3. Install NVIDIA Container Toolkit:
+```sh
+sudo apt-get update
+sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
+```
+4. Install CUDA 11.8:
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/cuda_11.8.0_520.61.05_linux.run
 sudo sh cuda_11.8.0_520.61.05_linux.run
 ```
-- Existing package manager installation of the driver found. It is strongly --> select `continue`
-- Cuda installer --> make sure to uncheck the driver  as we've already installed driver 525.
+- Select `continue` when installer finds an existing package manager installation of the driver.
+- Uncheck the driver installation as we've already installed driver 525.
 - Then select `install`installation option.
-4. Set up environment variables. Add the following lines to your ~/.bashrc file:
+5. Set up environment variables. Add the following lines to your ~/.bashrc file:
 ```sh
 echo 'export PATH=/usr/local/cuda-11.8/bin:$PATH' >> ~/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
@@ -116,7 +122,7 @@ Apply the changes:
 ```sh
 source ~/.bashrc
 ```
-5. Verify the installation with:
+6. Verify the installation with:
 ```sh
 nvidia-smi
 nvcc -V
