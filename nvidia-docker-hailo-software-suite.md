@@ -42,7 +42,11 @@ Adjust the versionname of the sw_suite as new versions are released regulary.
 ```
 You can drink some coffee or tea and ignore the Xauthority error as it's not crucial for non-graphical applications.
 
-8. Exit docker with the `exit` command. 
+8. Check the hailo software suite with
+```sh
+hailo -h
+```
+Then exit docker with the `exit` command. 
 
 ## 2. Use Docker with NVIDIA GPU
 
