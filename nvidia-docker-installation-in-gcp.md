@@ -133,6 +133,7 @@ nvcc -V
 ```sh
 docker run --gpus all nvidia/cuda:11.8.0-base-ubuntu20.04 nvidia-smi
 ```
+<<<<<<< HEAD
 2. To run the Hailo Software Suite container, check the container name first:
 ```sh
 docker ps -a
@@ -143,3 +144,6 @@ docker run --gpus all -it hailo_ai_sw_suite_2024-10:1
 ```
 
 Continue with [B.2 Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite.md).
+=======
+Continue with [B.2 Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite.md).
+>>>>>>> 428e8ff (Move hailo docker to B.2)
