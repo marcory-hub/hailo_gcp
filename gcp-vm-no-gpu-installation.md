@@ -58,7 +58,7 @@ ssh -i ~/.ssh/CGPkey USERNAME@EXTERNALIP
 	
 For the next time you SSH you VM instance, this External IP will change. Remember to copy-paste it in the command.
 
-Continue with [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md).
+Continue with [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-docker-software-suite-installation.md).
 
 ## Troubleshooting 
 
