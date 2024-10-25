@@ -2,6 +2,8 @@
 
 ## Re-training a Custom YOLOv8 Model for Raspberry Pi 5 Hailo-8L AI Kit in the Cloud
 
+WORK IN PROGRESS 
+
 #### How to 
 - Use your custom dataset in Google Colab to re-train a YOLOv8 model (free).
 - Optimize and compile it with a docker installation of the Hailo Software Suite on Google Cloud Platform (GCP) (for good optimization use a pay-as-you-go GPU instance).
