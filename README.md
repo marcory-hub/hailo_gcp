@@ -38,39 +38,25 @@ Use Hailo Model Zoo within the Docker container to convert your model to a Hailo
 
 Transfer the Hailo Executable File **yolov8s.hef** file to your Raspberry Pi 5. This will involve setting up the Hailo runtime environment and integrating your model into your application.
 
+# -=* WORK IN PROGRESS *=- 
+## Exploration of Hailo Software Suite (_no costs, no GPU_)
+While Colab offers free GPU resources, the virtual machine (VM) is needed to do the docker install of the Hailo Software Suite. A GPU is not available in the Free Trial.
+## 1. [Create a Virtual Machine in Google Cloud Platform (no GPU)](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-installation.md)
+## 2. [Docker Install of the Hailo Software Suite on GCP](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-docker-software-suite-installation.md)
 
+## Pay-as-you-go Use of Docker Compiler (_with GPU_)
+## 1. [Installing only Dataflow Compiler on GCP with NVIDIA GPU](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-dataflow-compiler-installation.md)
 
-### 2. Install Docker Hailo Software Suite or the Hailo Dataflow Compiler
-#### **Option A:** Free exploration of Hailo Software Suite (_no GPU_)
-1. Create a Virtual Machine in Google Cloud Platform 
-2. Docker Install Hailo Software Suite
-#### **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
-1. Using NVIDIA GPUs with Docker on Google Cloud Platform
-2. Hailo Software Suite in NVIDIA Docker installation
+## Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
+## 1. [Using NVIDIA GPUs with Docker on GCP with NVIDIA GPU](gcp-vm-gpu-docker-installation.md)
+## 2.[Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-docker-software-suite-installation.md)
 
-### 3. Optimize, Compile and Deploy your model
-1. Compile the Model using Hailo Model Zoo
-
-
+##  
 ## C.1. [Installing Dataflow Compiler with NVIDIA GPU on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-installation.md)
-
 ## C.2. [Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Jupyter notebook](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-model-zoo.md)
 
-### Note
- While it's possible to use only a CPU instance (option A) to get familiar with the software, using a GCP instance (option B) with a GPU provides good performance.
 
-## Free exploration of Hailo Software Suite (_no GPU_)
-While Colab offers free GPU resources, the virtual machine (VM) is needed to do the docker install of the Hailo Software Suite. A GPU is not available in the Free Trial.
-## A.1. [Create a Virtual Machine in Google Cloud Platform (no GPU)](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-installation.md)
 
-## A.2. [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-docker-software-suite-installation.md)
-
-## **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
-## B.1. [Using NVIDIA GPUs with Docker on Google Cloud Platform](gcp-vm-gpu-docker-installation.md)
-
-## B.2.[Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-docker-software-suite-installation.md)
-
-## 3. [Installing Dataflow Compiler on GCP with NVIDIA GPU](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-dataflow-compiler-installation.md)
 
 
 
