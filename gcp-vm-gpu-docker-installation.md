@@ -133,4 +133,4 @@ nvcc -V
 ```sh
 docker run --gpus all nvidia/cuda:11.8.0-base-ubuntu20.04 nvidia-smi
 ```
-Continue with [B.2 Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite.md).
+Continue with [B.2](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-docker-software-suite-installation.md).
