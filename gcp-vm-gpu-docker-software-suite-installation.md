@@ -1,12 +1,12 @@
 # B.2. Hailo Software Suite in NVIDIA Docker installation
 
-Following NVIDIA GPU installation ([B.1.](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-installation-in-gcp.md)), we'll delve into the setup of the Docker Hailo Software Suite and the necessary steps to enable Docker's utilization of the GPU.
+Following NVIDIA GPU installation ([B.1.](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-docker-installation.md)), we'll delve into the setup of the Docker Hailo Software Suite and the necessary steps to enable Docker's utilization of the GPU.
 
 #### Prerequisits 
 - Google account
 - Paid subscription to Google Cloud Platform (GCP)
 - Access to Hailo Developer Zone
-- GCP Compute Engine with NVIDIA GPUs and Docker (see [B.1.](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-installation-in-gcp.md))
+- GCP Compute Engine with NVIDIA GPUs and Docker (see [B.1.](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-docker-installation.md))
 
 ## Steps
 1. Docker Install of the Hailo Software Suite
@@ -65,7 +65,7 @@ hailo -h
 pip list | grep hailo
 ```
 
-Continue with [Compiling YOLOv8 Model with Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md).
+Continue with [Compiling YOLOv8 Model with Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/model-zoo-compilation.md).
 
 
 
