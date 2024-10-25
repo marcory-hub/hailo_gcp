@@ -17,7 +17,7 @@
 # Steps
 ### 1. Re-train a YOLOv8 model
 1. Prepare Dataset
-2. Train YOLOv8 Model in Colab
+2. Train YOLOv8 Model in Colab 
 ### 2. Install Docker Hailo Software Suite or  the Hailo Dataflow Compiler
 #### **Option A:** Free exploration of Hailo Software Suite (_no GPU_)
 1. Create a Virtual Machine in Google Cloud Platform 
