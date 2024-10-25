@@ -31,7 +31,7 @@ Do not forget to download the model to your local computer before you stop the C
 ## 3. [Installing and Compiling the Model using Hailo Model Zoo in the Dataflow Compiler environment](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-dfc-model-zoo)
 The Hailo Model Zoo can optimize and compile the `best.onnx` file to a `yolov8s.hef` file for the Raspberry AI-kit. This requires the Dataflow Compiler to work. In this step, we install both.
 
-## 4. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/model-zoo-compilation.md)
+## 4. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-dfc-model-zoo.md)
 The `best.onnx` file from step 3 is parsed and saved as `.har` file by the Model Zoo (installed in step 3) and optimized and saved again as `.har` file and finally compiled to a .hef file. During this process, your dataset with images (from step 1) is needed to calibrate that data during optimization (and optionally for validation to create evaluation results) to produce `yolov8s.hef` (Hailo Executable File).
 
 ## 5. [Deploy Model on Raspberry Pi 5](https://github.com/marcory-hub/hailo/blob/main/rpi-5-hailo-8l-deploy-model.md)
