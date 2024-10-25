@@ -38,7 +38,7 @@
 Gather images containing the objects you want to detect.
 Annotate these images using a tool like [CVAT](https://www.cvat.ai/) in YOLO1.1 format (bounding boxes and class labels). Or use the [hornet3000+](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris) dataset, more information on the YOLOs8n model on a Raspberry Pi4 8GB can be found [here](https://github.com/vespCV/hornet3000).
 
-## 1.2. [Make YOLOv8s Model on Colab](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb)
+## 1.2. [Make YOLOv8s Model on Colab](https://github.com/marcory-hub/hailo/blob/main/colab_yolov8s_create_model.ipynb)
 
 Follow this [Google Colab notebook to train a yolov8s model](https://github.com/marcory-hub/hailo/blob/main/colab_yolov8s_create_model.ipynb). The training process will generate a **best.onnx** file, which represents your trained model. 
 
@@ -47,28 +47,28 @@ Do not forget to download the model to your local computer before you stop the n
 ## **Option A:** Free exploration of Hailo Software Suite (_no GPU_)
 _If you're using pay-as-you-go GPU instances, you can skip to option B or C_.
 
-## A.1. [Create a Virtual Machine in Google Cloud Platform (no GPU)](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
+## A.1. [Create a Virtual Machine in Google Cloud Platform (no GPU)](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-installation.md)
 
 While Colab offers free GPU resources, the virtual machine (VM) is needed to do the docker install of the Hailo Software Suite. A GPU is not available in the Free Trial.
 
-## A.2. [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
+## A.2. [Docker Install of the Hailo Software Suite](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-docker-software-suite-installation.md)
 
 ## **Option B:** Pay-as-you-go Use of Hailo Software Suite (_with GPU_)
 _f you're using pay-as-you-go GPU instances and need to compile your model, skip to option C._
 
-## B.1. [Using NVIDIA GPUs with Docker on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-installation-in-gcp.md)
+## B.1. [Using NVIDIA GPUs with Docker on Google Cloud Platform](gcp-vm-gpu-docker-installation.md)
 
-## B.2.[Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/nvidia-docker-hailo-software-suite)
+## B.2.[Hailo Software Suite in NVIDIA Docker installation](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-docker-software-suite-installation.md)
 
 ## **Option C:** Pay-as-you-go Use of Dataflow Compiler (_with GPU_)
 
-## C.1. [Installing Dataflow Compiler with NVIDIA GPU on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/hailo-dataflow-compiler-gcp-gpu.md)
+## C.1. [Installing Dataflow Compiler with NVIDIA GPU on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-installation.md)
 
-## C.2. [Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Jupyter notebook](https://github.com/marcory-hub/hailo/blob/main/jupyter-hailo-dataflow-compiler-gcp-gpu.md)
+## C.2. [Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Jupyter notebook](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-compilation.md)
 
-## 3.1. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md)
+## 3.1. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/model-zoo-compilation.md)
 Use Hailo Model Zoo within the Docker container to convert your model to a Hailo-optimized format (`yolov8s.hef`).
 
-## 3.2. [Deploy Model on Raspberry Pi 5](https://github.com/marcory-hub/hailo/blob/main/deploy-model-on-raspberry-pi-5-ai-kit.md)
+## 3.2. [Deploy Model on Raspberry Pi 5](https://github.com/marcory-hub/hailo/blob/main/rpi-5-hailo-8l-deploy-model.md)
 
 Transfer the Hailo Executable File **yolov8s.hef** file to your Raspberry Pi 5. This will involve setting up the Hailo runtime environment and integrating your model into your application.
