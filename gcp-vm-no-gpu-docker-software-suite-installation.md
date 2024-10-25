@@ -3,7 +3,7 @@
 _If you're using pay-as-you-go GPU instances, you can skip this section._
 
 ### Prerequisites
-- Installation of a VM in GCP
+- Installation of a VM in GCP as described [here](gcp-vm-no-gpu-installation.md)
 - Access to Hailo Developer Zone
 
 ## Steps
@@ -11,7 +11,7 @@ _If you're using pay-as-you-go GPU instances, you can skip this section._
 2. Install Hailo AI software suite
 3. Run a Docker Container with the Hailo Software Suite
 
-This guide continues from [Create a Virtual Machine in Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md), assuming you've successfully set up a virtual machine (VM instance) on Google Cloud Platform (GCP) and established a secure SSH connection to it. In this part, we installing the Hailo Software Suite on the VM.
+This guide continues from [Create a Virtual Machine in Google Cloud Platform](gcp-vm-no-gpu-installation.md), assuming you've successfully set up a virtual machine (VM instance) on Google Cloud Platform (GCP) and established a secure SSH connection to it. In this part, we installing the Hailo Software Suite on the VM.
 
 You don't need to install the Hailo-RT PCIe driver for DataFlow Compiler (DFC) model creation on the Pi kit. This driver is specifically for interacting with the Hailo-8L device over the PCIe interface. DFC works independently and doesn't require the driver in the cloud. Therefore, you can safely ignore any related error messages.
 
@@ -80,7 +80,7 @@ hailo -h
 ```sh
 pip list | grep hailo
 ```
-Continue with [Compiling the Model with Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/compile-the-model-using-hailo-model-zoo.md).
+Continue with [Compiling the Model with Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/model-zoo-compilation.md).
 
 
 
