@@ -1,4 +1,4 @@
-# C.1. Installing Dataflow Compiler with NVIDIA GPU on Google Cloud Platform
+# C.1. Installing Dataflow Compiler with NVIDIA GPU and Jupyter on Google Cloud Platform
 
 The compulation of the onnx file (made [here](https://github.com/marcory-hub/hailo/blob/main/colab_yolov8s_create_model.ipynb)) to a hef file that runs on you Raspberry Pi5 AI kit
 

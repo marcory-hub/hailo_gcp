@@ -68,7 +68,7 @@ _f you're using pay-as-you-go GPU instances and need to compile your model, skip
 
 ## C.1. [Installing Dataflow Compiler with NVIDIA GPU on Google Cloud Platform](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-installation.md)
 
-## C.2. [Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Jupyter notebook](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-compilation.md)
+## C.2. [Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Jupyter notebook](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-model-zoo.md)
 
 ## 3.1. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/model-zoo-compilation.md)
 Use Hailo Model Zoo within the Docker container to convert your model to a Hailo-optimized format (`yolov8s.hef`).

@@ -1,4 +1,4 @@
-# C.2. Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Jupyter notebook
+# C.2. Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Model Zoo
 
 Work in progress
 
