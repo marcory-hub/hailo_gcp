@@ -1,4 +1,4 @@
-# B.3. DataFlow Compiler using NVIDIA GPUs with on Google Cloud Platform
+# DataFlow Compiler using NVIDIA GPUs with on Google Cloud Platform
 
 This guide provides steps for setting up a GCP Compute Engine instance with GPU support to run the Hailo DataFlow Compiler. This guide provides a basic configuration. You might need to adjust settings based on your specific needs.
 
