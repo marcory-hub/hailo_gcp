@@ -37,7 +37,7 @@
 
 ## 1.1. Prepare Dataset
 
-Gather images containing the objects you want to detect.
+Gather images containing the objects you want to detect. You find tips for best training results [here](https://github.com/ultralytics/yolov5/wiki/Tips-for-Best-Training-Results#dataset)
 Annotate these images using a tool like [CVAT](https://www.cvat.ai/) in YOLO1.1 format (bounding boxes and class labels). Or use the [hornet3000+](https://www.kaggle.com/datasets/marcoryvandijk/vespa-velutina-v-crabro-vespulina-vulgaris) dataset, more information on the YOLOs8n model on a Raspberry Pi4 8GB can be found [here](https://github.com/vespCV/hornet3000).
 
 ## 1.2. [Make YOLOv8s Model on Colab](https://github.com/marcory-hub/hailo/blob/main/colab_yolov8s_create_model.ipynb)
