@@ -40,7 +40,7 @@ Annotate these images using a tool like [CVAT](https://www.cvat.ai/) in YOLO1.1 
 
 ## 1.2. [Make YOLOv8s Model on Colab](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb)
 
-Follow this notebook [hailo_YOLOv8s Google Colab notebook](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb) to train a YOLOv8 model using your custom dataset in Colab. The training process will generate a **best.onnx** file, which represents your trained model. 
+Follow this [Google Colab notebook to train a yolov8s model](https://github.com/marcory-hub/hailo/blob/main/colab_yolov8s_create_model.ipynb). The training process will generate a **best.onnx** file, which represents your trained model. 
 
 Do not forget to download the model to your local computer before you stop the notebook.
 
