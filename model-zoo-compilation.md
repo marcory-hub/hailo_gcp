@@ -1,12 +1,14 @@
 # 3.1 Compiling the Model using Hailo Model Zoo
 
+WORK IN PROGRESS
+
 This guide outlines how to optimize (if you have a GPU) and compile your YOLOv8 model for object detection using Hailo Model Zoo within a Docker container.
 
 ### Prerequisites
 
-- An [active VM instance on Google Cloud Platform (GCP)](https://github.com/marcory-hub/hailo/blob/main/create-and-connect-gcp-vm-instance-w-local-terminal.md)
-- The ["runs.zip" file](https://github.com/marcory-hub/hailo/blob/main/hailo_YOLOv8s.ipynb) containing the best.onnx model
-- The [Hailo Software Suite Docker container running on your VM](https://github.com/marcory-hub/hailo/blob/main/install-hailo-software-suite-on-google-cloud-VM-instance.md)
+- A VM with hailo software suite [with GPU](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-docker-software-suite-installation.md) or [no-GPU](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-no-gpu-docker-software-suite-installation.md), the latter does not optimize the model.
+- The ["runs.zip" file](https://github.com/marcory-hub/hailo/blob/main/colab_yolov8s_create_model.ipynb) containing the best.onnx model
+
 
 ## 1. Copy `best.onnx` to VM
 Unzip `runs.zip` locally and locate the `best.onnx` file (can be found in /runs/detect/train/weights/best.onnx).
@@ -62,4 +64,4 @@ Finally, use `scp` from your local terminal to copy the `yolov8s.hef` file from 
 scp USERNAME@EXTERNALIP:/path/to/file /local/path/to/file
 ```
 
-Continue with [Deploy Model on Raspberry Pi 5](deploy-model-on-raspberry-pi-5-ai-kit.md)
+Continue with [Deploy Model on Raspberry Pi 5](https://github.com/marcory-hub/hailo/blob/main/rpi-5-hailo-8l-deploy-model.md)
