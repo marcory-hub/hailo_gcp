@@ -1,10 +1,16 @@
 # C.2. Using Hailo Dataflow Compiler with NVIDIA GPU on Google Cloud Platform with Jupyter notebook
 
+Work in progress
+
+To-do
+- Replace by Jupyter notebook when finished
 
 #### Prerequisits
+- Hailo Dataflow Compiler with Jupyter notebook installation as described [here](https://github.com/marcory-hub/hailo/blob/main/jupyter-gpu-dataflow-compiler-installation.md)
 
-3. Continue with https://hailo.ai/developer-zone/documentation/v3-29-0/
+## Steps
 
+## 1.
 
 1. Setup and Initialization.
 Import Required Libraries:
