@@ -37,4 +37,3 @@ Access Jupyter notebook by typing this in your local browser
 http://localhost:8888
 ```
 Enter the token to get access to the Jupyter notebook.
-## 2.
