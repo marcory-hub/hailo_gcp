@@ -35,10 +35,15 @@ unzip data.zip
 ```sh
 git clone https://github.com/hailo-ai/hailo_model_zoo.git
 ```
-2. cd into the folder and install all requirements:
+3. cd into the folder and install all requirements:
 ```sh
 cd hailo_model_zoo
 pip install -e .
+```
+4. In this folder also install the cocco dataset for evaluate/optimize/compile the yolov8 model:
+```sh
+python hailo_model_zoo/datasets/create_coco_tfrecord.py val2017
+python hailo_model_zoo/datasets/create_coco_tfrecord.py calib2017
 ```
 3. cd back to you working directory:
 ```sh
