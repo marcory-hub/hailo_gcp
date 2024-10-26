@@ -49,6 +49,10 @@ python hailo_model_zoo/datasets/create_coco_tfrecord.py calib2017
 ```sh
 cd ..
 ```
+4. Optional: read some information of the yolov8s model:
+```sh
+hailomz info yolov8s
+```
 ## 3. Convert the onnx file to a hef file with model zoo
 
 1. Start optimization and compilation. Adjust classes number accordingly to your model:

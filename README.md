@@ -29,7 +29,7 @@ Use the annotated images from step 1 to [train a YOLOv8s model in Google Colab](
 Do not forget to download the model to your local computer before you stop the Colab notebook!
 
 ## 3. [Installing the Dataflow Compiler environment on GCP](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-dataflow-compiler-installation.md)
-The Hailo Model Zoo can optimize and compile the `best.onnx` file to a `yolov8s.hef` file for the Raspberry AI-kit. This requires the Dataflow Compiler to work. In this step, we install both.
+Install Dataflow Compiler in a VM on GCP. The Hailo Model Zoo (installed and used in step 4) is using the Hailo Dataflow Compiler for parsing, model optimization, emulation and compilation of the deep learning models. 
 
 ## 4. [Compile the Model using Hailo Model Zoo](https://github.com/marcory-hub/hailo/blob/main/gcp-vm-gpu-dfc-model-zoo.md)
 The `best.onnx` file from step 3 is parsed and saved as `.har` file by the Model Zoo (installed in step 3) and optimized and saved again as `.har` file and finally compiled to a .hef file. During this process, your dataset with images (from step 1) is needed to calibrate that data during optimization (and optionally for validation to create evaluation results) to produce `yolov8s.hef` (Hailo Executable File).
