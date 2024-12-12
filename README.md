@@ -2,7 +2,9 @@
 
 ===================================================================================
 
-First check the most recent information (for example on [github](https://github.com/ultralytics/ultralytics/issues/18027#issuecomment-2525287603)) before you install Ultralytics because their was a [miner injected](https://blog.yossarian.net/2024/12/06/zizmor-ultralytics-injection) in 8.3.41, -42, -45, and -46.
+First check the most recent information (for example on [github](https://github.com/ultralytics/ultralytics/issues/18027#issuecomment-2525287603)) before you install Ultralytics
+
+because their was a [miner injected](https://blog.yossarian.net/2024/12/06/zizmor-ultralytics-injection) in 8.3.41, -42, -45, and -46.
 
 ===================================================================================
 
