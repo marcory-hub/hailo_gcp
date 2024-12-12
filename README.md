@@ -1,5 +1,12 @@
 # Re-training a Custom YOLOv8 Model for Raspberry Pi 5 Hailo-8L AI Kit in the Cloud
 
+===================================================================================
+
+First check the most recent information (for example on [github](https://github.com/ultralytics/ultralytics/issues/18027#issuecomment-2525287603) before you install Ultralytics because their was a [miner injected](https://blog.yossarian.net/2024/12/06/zizmor-ultralytics-injection) in 8.3.41, -42, -45, and -46.
+
+===================================================================================
+
+
 #### How to 
 - Use your custom dataset in Google Colab to re-train a pre-trained YOLOv8 model (free).
 - Optimize and compile it on Google Cloud Platform (GCP) with Hailo Dataflow Compiler and Model Zoo (for good optimization use a pay-as-you-go GPU instance).
