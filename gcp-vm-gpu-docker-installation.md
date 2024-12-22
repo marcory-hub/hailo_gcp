@@ -7,53 +7,53 @@ This guide provides steps for setting up a GCP Compute Engine instance with GPU 
 - Paid subscription to Google Cloud Platform (GCP)
 
 ## Steps
-1. Create a VM with GPU
-2. Generate public- and private SSH key
-3. Upload public key to CGP
-4. Use private key to connect VM with local terminal
-5. Install Docker
-6. NVIDIA Docker Installation
-7. Run a Docker Container with GPU
+1. Generate public- and private SSH key
+2. Create a VM with GPU
+3. Use private key to connect VM with local terminal
+4. Install Docker
+5. NVIDIA Docker Installation
+6. Run a Docker Container with GPU
 
-## 1. Create a VM with GPU
-
-1. **Create or Select a Project**: Creat a `NEW PROJECT` or use an excisting project in Google Cloud Platform (cloud.google.com)
-2. **Create VM instance**: In the Navigation Menu (top left) navigate to `Compute Engine` > `VM instances` > click `CREATE INSTANCE` (top middel)
-3. **Configure the VM instance**: 
-**Name**: choose a descriptive name such as `hailo-gpu`.
-
-**Region/Zone**: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability). 
-
-**Machine configuration**: select `GPU` -> `n1-standard-8` (8 vCPU, 30 GB memory). GCP offers Spot VMs for lower costs. However, these VMs can be interrupted if needed by GCP, but 60-90% discount. 
-
-**Boot disk**: 
-Click `SWITCH IMAGE` and select
-  - Image: Ubuntu 20.04 LTS x86/64
-  - Standard persistent disk
-  - Size: 200 GB
-  - Standard persistent disk to save costs. 
-  - Size (GB): 200 GB and resize upwars later if needed. Downgrading size is not possible. 
-
-**Firewall**: activate allow HTTP traffic (needed for Jupyter notebook on local browser).
-5. Click `CREATE`
-
-## 2. Generate public- and private key
+## 1. Generate public- and private key
 
 In your local terminal generate a public- and private key with the following command below. Replace PATH with a secure location on your local drive where you store your keys (for example ~/.ssh/). Replace KEYNAME with a descriptive name (for example CGPkey). Replace USERNAME with your username in GCP. (Optional: a strong passphrase for added security).
 ```sh
 ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 ```
 
-## 3. Upload public key to CGP
+## 2. Create a VM with GPU
 
-1. In GCP Navigation Menu navigate to `Compute Engine` > `Metadata` > `SSH KEYS` > `EDIT` > `+ADD ITEM`
-2. Open your public key in your local terminal (for example with nano GCPkey.pub)
-3. Copy this key
-4. In GCP click `ADD SSH KEY`
-5. Paste the key in SSH key #
-6. click 'SAVE'
+Login in to your [Google Cloud](https://console.cloud.google.com/) and select `compute engine`.
 
-## 4. Use private key to connect VM with local terminal
+1. **Create or Select a Project**: select `NEW PROJECT`.
+2. **Create VM instance**: in the Navigation Menu (top left) navigate to `Compute Engine` > `VM instances` > click `CREATE INSTANCE` (top middel)
+
+The next steps are selected on the left side bar: 
+
+3. **Machine configuration**:
+	1. Name: choose a descriptive name such as `hailo-gpu`.
+	2. Region/Zone: Select a region based on your location or target audience (affects latency). Choose a zone within the region for redundancy (availability)
+	3. Select `GPU` (default: NVIDIA T4 number of GPUs 1)
+	4. Machine type: `n1-standard-8` (8 vCPU, 30 GB memory or 16 60 GB).
+4. **OS and storage**
+	1. Click `switch image` 
+	2. Operating system: `Ubuntu`
+	3. Version: `Ubuntu 20.04 LTS x86/64`
+	4. Boot disk type: `Standard persistent disk`
+	5. Size (GB): 200
+	6. Click `SELECT`
+5. **Networking**
+	1. Select `Allow HTTP trafic` (needed for Jupyter notebook on local browser)
+6. **Observability**
+	1. Select `Ops Agent (Recommended)` (optional)
+7. **Security**
+	1. Under **Add manually generated SSH keys** click `+ ADD ITEM`
+	2. Copy your public SSH key that you created in step 1
+8. **Advanced**
+	1. Under **Provision model** select VM provsioning model: `Spot`
+9. Select `CREATE MACHINE`
+
+## 3. Use private key to connect VM with local terminal
 
 1. **Obtain VM External IP**: In the GCP Navigation Menu, navigate to Compute Engine > VM instances. Ensure the VM instance is active. If not, click Start/resume in the instance's menu. Copy External IP address of the instance.
 2. **Establish SSH Connection**: Open a terminal in your local machine. Use the following command, replacing ~/.ssh with the path you use to store public- and private keys. Replace KEYNAME with your key-name (such as GCPkey), USERNAME with your GCP username and EXTERNALIP with the copied IP, confirm the connection when prompted.
@@ -61,7 +61,7 @@ ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 ssh -i ~/.ssh/KEYNAME USERNAME@EXTERNALIP
 ```
 
-## 5. Install Docker
+## 4. Install Docker
 
 1. Follow the steps from the Docker website under 1 [Install using the `apt` repository](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 2. Replace step 2 by checking the VERSION_STRING in the first command (if needed replace it with a updated version). Then run these commands to install the specific version of Docker Engine as required for the suite installation as Docker file.
@@ -78,7 +78,7 @@ sudo usermod -aG docker USERNAME
 groups USERNAME
 ```
 
-## 6. NVIDIA Docker Installation
+## 5. NVIDIA Docker Installation
 
 1. Install the NVIDIA Driver 525:
 
@@ -127,7 +127,7 @@ source ~/.bashrc
 nvidia-smi
 nvcc -V
 ```
-## 7. Run a Docker Container with GPU
+## 6. Run a Docker Container with GPU
 
 1. To run a basic Docker container with GPU support:
 ```sh
