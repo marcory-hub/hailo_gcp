@@ -1,2 +1,5 @@
 # Ignore finder files
 .DS_Store
+
+# Ignore zipped files
+*.zip
