@@ -16,7 +16,7 @@ This guide provides steps for setting up a GCP Compute Engine instance with GPU 
 
 ## 1. Generate public- and private key
 
-In your local terminal generate a public- and private key with the following command below. Replace PATH with a secure location on your local drive where you store your keys (for example ~/.ssh/). Replace KEYNAME with a descriptive name (for example CGPkey). Replace USERNAME with your username in GCP. (Optional: a strong passphrase for added security). The public key is needed in step 2.7.2.
+In your local terminal generate a public- and private key with the following command below. Replace PATH with a secure location on your local drive where you store your keys (for example ~/.ssh/). Replace KEYNAME with a descriptive name (for example CGPkey). Replace USERNAME with your username in GCP. (Optional: a strong passphrase for added security). The public key is needed in step 2.7.ii.
 ```sh
 ssh-keygen -t rsa -b 4096 -f PATH/KEYNAME -C USERNAME
 ```
