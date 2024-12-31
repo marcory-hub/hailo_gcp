@@ -3,3 +3,4 @@
 
 # Ignore zipped files
 *.zip
+*.whl
